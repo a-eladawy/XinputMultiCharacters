@@ -8,9 +8,9 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.x'
-      - run: dotnet restore XInputEmulator.sln
-      - run: dotnet publish XInputEmulator.sln -c Release -o ./publish
+      - run: dotnet restore XInputMultiCharacter.sln
+      - run: dotnet publish XInputMultiCharacter.sln -c Release -o ./publish
       - uses: actions/upload-artifact@v4
         with:
-          name: XInputEmulator-build
+          name: XInputMultiCharacter-build
           path: ./publish
